@@ -8,7 +8,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, 
 such as Filebeat.
 
-/etc/ansible/roles/filebeat.yml
+../Ansible/Filebeat_Playbook
 
 This document contains the following details:
 - Description of the Topology
