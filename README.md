@@ -28,7 +28,9 @@ What aspect of security do load balancers protect? DDoS attacks
 What is the advantage of a jump box? Controls access to the other machines by allowing connections from specific IP addresses 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system network.
+
 What does Filebeat watch for? Changes in file system
+
 What does Metricbeat record? Machine metrics such as uptime and CPU usage
 
 The configuration details of each machine may be found below.
@@ -50,8 +52,10 @@ addresses:
 Add whitelisted IP addresses 23.120.57.138
 
 Machines within the network can only be accessed by the jump box.
+
 Which machine did you allow to access your ELK VM? jump box
-What was its IP address?_ 10.1.0.9
+
+What was its IP address? 10.1.0.9
 
 A summary of the access policies in place can be found in the table below.
 
@@ -65,7 +69,8 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-What is the main advantage of automating configuration with Ansible?_ faster to recreate it onto another machine
+
+What is the main advantage of automating configuration with Ansible? Faster to recreate it onto another machine
 
 The playbook implements the following tasks:
 - installs docker.io
@@ -79,10 +84,11 @@ Images/Elk_Container.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-List the IP addresses of the machines you are monitoring_ 10.1.0.11
+
+List the IP addresses of the machines you are monitoring 10.1.0.11
 
 We have installed the following Beats on these machines:
-Specify which Beats you successfully installed_ metricbeats
+Specify which Beats you successfully installed Metricbeats
 
 These Beats allow us to collect the following information from each machine:
 In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat`
@@ -99,8 +105,11 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to the container to check that the installation worked as expected.
 
 Which file is the playbook? Yml file in the roles directory
+
 Which file do you update to make Ansible run the playbook on a specific machine? Ansible host file
+
 How do I specify which machine to install the ELK server on versus which to install Filebeat on? The host name given in the playbook
+
 Which URL do you navigate to in order to check that the ELK server is running? Public IP of virtual machine with the elk server
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc. 
