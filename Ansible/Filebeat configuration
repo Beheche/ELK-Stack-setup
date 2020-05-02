@@ -1,0 +1,24 @@
+---
+  - name: Config filebeat on DVWA containers
+    hosts: webservers
+    become: true
+    tasks:
+    - name: Download filebeat
+      command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+
+    - name: Install filebeat
+      command: dpkg -i filebeat-7.6.1-amd64.deb
+
+    - name: Copy filebeat into DVWA VMs
+      copy:
+        src: ../files/filebeat.yml
+        dest: /etc/filebeat/
+
+    - name: Enable system module
+      command: filebeat modules enable system
+
+    - name: Setup filebeat
+      command: filebeat setup
+
+    - name: Start filebeat service
+      command: service filebeat start
